@@ -9,6 +9,8 @@ set backspace=indent,eol,start
 " Switch syntax highlighting on
 syntax on
 
+let mapleader = ","
+
 filetype off " required by Vundle
 
 " Vundle
@@ -17,6 +19,10 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
+Plugin 'scrooloose/nerdtree'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'Quramy/tsuquyomi'
+Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()            " required by Vundle, list plugins before this
 
@@ -36,6 +42,9 @@ abbr tempalte template
 
 " Snippets
 abbr clog console.log(
+
+" Remaps
+nnoremap <leader>l :ls<CR>:b<space>
 
 " backups: won't backup for a while, I could set a different
 " backup location if this doesn't work for me
@@ -65,4 +74,13 @@ set mat=2     " blinking
 set encoding=utf8
 let base16colorspace=256
 set t_Co=256
+
+let g:airline_powerline_fonts = 1
+
+" Automatic omnicompletion for YouCompleteMe
+if !exists('g:ycm_semantic_triggers')
+  let g:ycm_semantic_triggers = {}
+endif
+
+let g:ycm_semantic_triggers['typescript'] = ['.']
 
