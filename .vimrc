@@ -59,6 +59,7 @@ set autoindent
 set smartindent
 
 " enhanced command line tab completion
+set path+=**
 set wildmenu
 set wildmode=list:longest
 
@@ -67,6 +68,7 @@ set scrolloff=3
 " searching
 set ignorecase
 set incsearch
+set hlsearch
 
 set showmatch "for highlighting matching braces
 set mat=2     " blinking
