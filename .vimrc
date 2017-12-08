@@ -70,6 +70,9 @@ set ignorecase
 set incsearch
 set hlsearch
 
+" Enables escaping highlighted search
+nnoremap <leader>1 :noh<return><esc>
+
 set showmatch "for highlighting matching braces
 set mat=2     " blinking
 
