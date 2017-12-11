@@ -23,6 +23,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'Quramy/tsuquyomi'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'mattn/emmet-vim'
 
 call vundle#end()            " required by Vundle, list plugins before this
 
@@ -88,4 +90,9 @@ if !exists('g:ycm_semantic_triggers')
 endif
 
 let g:ycm_semantic_triggers['typescript'] = ['.']
+
+" set foldlevelstart=1
+" set foldmethod=indent
+
+ autocmd FileType javascript,typescript,json setlocal foldmarker={,}
 
