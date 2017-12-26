@@ -29,6 +29,9 @@ Plugin 'mattn/emmet-vim'
 call vundle#end()            " required by Vundle, list plugins before this
 
 filetype plugin indent on    " required by Vundle
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
 " Show line numbers
 set number
